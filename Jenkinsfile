@@ -15,6 +15,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Regression tests running...'
+                sh 'javac Hello.java'
+                sh 'java Hello'
             }
         }
     }
